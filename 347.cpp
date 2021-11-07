@@ -12,7 +12,7 @@ public:
         priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> heap;
         for(auto p:m){
             if(heap.size()==k){
-                if(heap.top().first < p.first){
+                if(heap.top().first < p.second){
                     heap.pop();
                     heap.push(make_pair(p.second,p.first));
                 }
