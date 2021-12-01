@@ -8,7 +8,7 @@ public:
     void buildNext(string& pattern, vector<int>& nxt){
         nxt[0] = -1;
         int j=0,k=-1;
-        while(j<pattern.length()-1){
+        while(j<pattern.length()){
             if(k==-1||pattern[j]==pattern[k]){
                 nxt[++j] = ++k;
             }else{
@@ -19,7 +19,7 @@ public:
     int strStr(string haystack, string needle) {
         if(needle.length()==0)return 0;
         int i=0,j=0;
-        vector<int> nxt(needle.length());
+        vector<int> nxt(needle.length()+1);
         buildNext(needle,nxt);
         while(i<haystack.length()){
             if(j==-1||haystack[i]==needle[j]){
