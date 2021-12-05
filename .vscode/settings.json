@@ -6,6 +6,7 @@
         "*.tcc": "cpp",
         "new": "cpp",
         "tuple": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "set": "cpp"
     }
 }
